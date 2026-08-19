@@ -1,13 +1,13 @@
 <html>
     <head> 
-       <!-- <style>
+       <style>
         h1 {color: #004080;}
         #profissao {color: #32CD32}
         .competencias {color: #DAA520}
         li.destaque {color:#B22222}
         div > p {color:#B22222}
             a[target='_blank'] {color:#c71585}
-        </style> -->
+        </style> 
         <link rel"stylesheet" href="https://rcmp-code.github.io/S05-IHM/cadex.css">
     </head>
     <body> 
@@ -16,12 +16,31 @@
         <a href="https://www.inatel.br" target="_blank">
             <p>Linkedin</p> </a>
         <h3 class="competencias">competencias</h3>
-        <ul>
+        <ul class="lista">
             <li class="destaque">HTML</li>
             <li>CSS</li>
             <li>JS</li>
         </ul>
         <div<p>WhatsApp</p></div>
-        <div onclick="alert('meuemail@inatel.br')">E-mail</div>
+        <div onclick='enviarEmail()'>E-mail</div>
+        <p id="msm"></p>
+        <script>
+            function enviarEmail(){
+            document.getElementById("msm").innerHTML = "Mensagem Enviada"
+            document.getElementById("msm").style.color = "blue";
+
+             
+
+             let lista = document.querySelector(".lista");
+             let novoItem = document.createElement("li");
+             novoItem.textContent = "Framework";
+             novoItem.classList.add("destaque");
+             lista.appendChild(novoItem);
+
+            }
+            document.getElementById("msm").addEventListener("click", function(){ document.getElementById("profissao").style.color = "red";});
+
+        </script>
+    
     </body>
 </html>
