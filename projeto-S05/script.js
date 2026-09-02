@@ -89,6 +89,6 @@ console.log("Aprovado");
     }
 
     let cores = ["vermelho", "Verde","Azul"];
-    For(let i = 0; i < cores.length; i++){
+    for(let i = 0; i < cores.length; i++){
 console.log(cores[i]);
     }
